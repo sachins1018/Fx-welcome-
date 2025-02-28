@@ -1,0 +1,39 @@
+mkdir my-script-repo
+cd my-script-repo
+git init
+nano my_script.sh
+#!/bin/bash
+
+# रंग परिभाषित करें
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+WHITE='\033[0;37m'
+NC='\033[0m' # कोई रंग नहीं (नॉर्मल कलर)
+
+# लेखक की जानकारी (हरा रंग)
+echo "${GREEN}Created By im_Black_Boy${NC}"
+echo "${GREEN}----------------------------${NC}"
+echo "${CYAN}Instagram :@ mr_Black_Boy ${NC}"
+echo "${CYAN}Github: github.com/Sachin/Solunke/${NC}"
+echo "${GREEN}----------------------------${NC}"
+
+# स्वागत संदेश (पीला रंग)
+figlet -f standard "${YELLOW}Welcome${NC}"
+
+# वर्तमान तिथि और समय (लाल रंग)
+echo "${RED}$(date)${NC}"
+
+# प्रॉम्प्ट (नीला रंग)
+echo ""
+echo "${BLUE}┌─[$(date +%T)]─────[root]───[1]${NC}"
+echo "${BLUE}|${NC}"
+echo "${BLUE}└─[~]────►${NC}"
+
+git add my_script.sh
+git commit -m "Add my_script.sh"
+git remote add origin https://github.com/YourUsername/my-script-repo.git
+git push -u origin master
